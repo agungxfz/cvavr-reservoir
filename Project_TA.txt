@@ -1,0 +1,135 @@
+/*
+      if (dataUS > 0 && dataUS <=8)
+      { 
+        SMSReport();
+        levelAir = 3;
+        mot3 = 1; rel3 = 1;
+        if(!swb3)
+        {
+            mot3 = 0; rel3 = 0;    
+        }
+      }
+      
+      else if (dataUS > 9 && dataUS <= 16)
+      {
+        SMSReport(); 
+        levelAir = 2;
+        mot2 = 1; rel2 = 1;
+        if(!swb2)
+        {
+            mot2 = 0; rel2 = 0;
+        }
+      }
+      
+      else if (dataUS > 17 && dataUS <= 24)
+      {
+        SMSReport();    
+        levelAir = 1;
+        mot1 = 1; rel1 = 1;
+        if(!swb1)
+        {
+            mot1 = 0; rel1 = 0;
+        }
+      }
+      
+      else if (dataUS > 25)
+      {
+        levelAir = 0;
+        mot1 = 0; rel1 = 0;
+        mot2 = 0; rel2 = 0;
+        mot3 = 0; rel3 = 0;
+      }
+      
+      ////////////////////////////
+      if(levelAir == 2 && !swb3)
+      {
+        mot3 = 0; rel3 = 1;
+        if(levelAir == 2 && !swa3)
+        {
+            mot3 = 0; rel3 = 0;    
+        }
+      }
+      else if(levelAir == 1 && !swb2)
+      {
+        mot2 = 0; rel2 = 1;
+        if(levelAir == 1 && !swa2)
+        {
+            mot2 = 0; rel2 = 0;    
+        }
+      }
+      
+      else if(levelAir == 0 && !swb1)
+      {
+        mot1 = 0; rel1 = 1;
+        if(!swa1)//levelAir == 0 && 
+        {
+            mot1 = 0; rel1 = 0;    
+        }
+      }
+      */
+      //////////////////////////////////////////////
+            if (dataUS > 0 && dataUS <=8)
+      { 
+        //SMSReport();
+        levelAir = 3;
+        mot3 = 1; rel3 = 1;
+        while(!swb3)
+        {
+            mot3 = 0; rel3 = 0;    
+        }
+      }
+      
+	  else if (dataUS > 9 && dataUS <= 16)
+	  {
+        //SMSReport(); 
+        levelAir = 2;
+        mot2 = 1; rel2 = 1;
+        while(!swb2)
+        {
+            mot2 = 0; rel2 = 0;
+        }
+      }
+      
+	  else if (dataUS > 17 && dataUS <= 24)
+	  {
+        //SMSReport();	
+        levelAir = 1;
+        mot1 = 1; rel1 = 1;
+        while(!swb1)
+        {
+            mot1 = 0; rel1 = 0;
+        }
+      }
+      
+	  else if (dataUS > 25)
+      {
+        levelAir = 0;
+//        mot1 = 0; rel1 = 0;
+//        mot2 = 0; rel2 = 0;
+//        mot3 = 0; rel3 = 0;
+      }
+      /// balik arah ///
+      if(levelAir == 2 && !swb3)
+      {
+        mot3 = 0; rel3 = 1;
+        while(!swa3)
+        {
+            mot3 = 0; rel3 = 0;
+        } 
+      }
+      else if(levelAir == 1 && !swb2)
+      {
+        mot2 = 0; rel2 = 1;
+        while(!swa2)
+        {
+            mot2 = 0; rel2 = 0;
+        } 
+      }
+      else if(levelAir == 0 && !swb1)
+      {
+        mot1 = 0; rel1 = 1;
+        while(!swa1)
+        {
+            mot1 = 0; rel1 = 0;
+        } 
+      }
